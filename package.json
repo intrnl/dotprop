@@ -1,0 +1,31 @@
+{
+	"name": "@intrnl/dotprop",
+	"description": "Safely access or modify object properties with dot-notated path",
+	"version": "0.1.0",
+	"license": "MIT",
+	"author": "intrnl",
+	"repository": {
+		"url": "https://github.com/intrnl/dotprop"
+	},
+	"source": "lib/index.js",
+	"main": "dist/dotprop.js",
+	"module": "dist/dotprop.mjs",
+	"types": "types/index.d.ts",
+	"sideEffects": false,
+	"files": [
+		"dist/",
+		"types/",
+		"README.md"
+	],
+	"scripts": {
+		"build": "rollup -c",
+		"prepublishOnly": "pnpm run build"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^15.0.0",
+		"@rollup/plugin-node-resolve": "^9.0.0",
+		"esbuild": "^0.6.32",
+		"rollup": "^2.26.11",
+		"rollup-plugin-esbuild": "^2.5.0"
+	}
+}
