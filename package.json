@@ -25,9 +25,9 @@
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "^15.0.0",
 		"@rollup/plugin-node-resolve": "^9.0.0",
-		"esbuild": "^0.6.32",
+		"esbuild": "^0.7.2",
 		"esm": "^3.2.25",
-		"rollup": "^2.26.11",
+		"rollup": "^2.27.1",
 		"rollup-plugin-esbuild": "^2.5.0",
 		"uvu": "^0.3.3"
 	}
