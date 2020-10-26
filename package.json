@@ -19,16 +19,12 @@
 	],
 	"scripts": {
 		"test": "uvu -r esm tests",
-		"build": "rollup -c",
+		"build": "bundl",
 		"prepublishOnly": "pnpm run build"
 	},
 	"devDependencies": {
-		"@rollup/plugin-commonjs": "^15.0.0",
-		"@rollup/plugin-node-resolve": "^9.0.0",
-		"esbuild": "^0.7.2",
+		"@intrnl/bundl": "^0.1.8",
 		"esm": "^3.2.25",
-		"rollup": "^2.27.1",
-		"rollup-plugin-esbuild": "^2.5.0",
-		"uvu": "^0.3.3"
+		"uvu": "^0.3.4"
 	}
 }
