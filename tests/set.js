@@ -1,5 +1,5 @@
 import { suite } from 'uvu';
-import { is } from 'uvu/assert';
+import { is, not } from 'uvu/assert';
 import { set } from '../lib';
 
 
@@ -21,6 +21,17 @@ it('should set a deep value', () => {
 	set(obj, 'foo.bar.baz', value);
 
 	is(obj.foo.bar.baz, value);
+});
+
+it('should prevent prototype pollution', () => {
+	let obj = {};
+	let value = 'Yes, its polluted.';
+
+	set(obj, '__proto__.polluted', value);
+
+  is(obj.polluted, value);
+  not({}.polluted, value);
+  is({}.polluted, undefined);
 });
 
 it.run();
